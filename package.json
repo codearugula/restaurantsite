@@ -1,0 +1,22 @@
+{
+  "name": "chez-j",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codearugula/ChezJ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codearugula/ChezJ/issues"
+  },
+  "homepage": "https://github.com/codearugula/ChezJ#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}

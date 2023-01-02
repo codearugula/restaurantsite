@@ -1,0 +1,282 @@
+:root {
+  --color-navbar: rgba(28, 189, 243, 0.3);
+  --color-primary: lightblue;
+  --color-secondary: white;
+  --color-btn-background: blue;
+  --color-btn-hover-text: blue;
+  --color-btn-hover-background: aqua;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 6rem;
+  font-family: "Tangerine", cursive;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+html a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+/*Logo*/
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+/*Buttons*/
+
+.btn {
+  background-color: var(--color-btn-background);
+  border: 0;
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--color-secondary);
+  box-shadow: 0 0 5px 2px black;
+  margin-top: 2px;
+}
+
+.btn--mailing-list {
+  margin-top: -10px;
+}
+/* NavBar */
+
+.navBar {
+  background-color: var(--color-secondary);
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.fa-bars {
+  font-size: 2.5rem;
+  padding-left: 40px;
+}
+
+.navBar a {
+  text-decoration: 0;
+  color: var(--color-secondary);
+  padding-right: 40px;
+}
+
+.navBar__options > i {
+  color: var(--color-secondary);
+}
+
+.navBar .nav-small,
+.navBar i {
+  color: black;
+}
+.navBar__options {
+  display: none;
+}
+
+.navBar__select {
+  float: left;
+}
+
+.navBar__select i {
+  color: var(--color-secondary);
+}
+
+.navBar__select__dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100px;
+}
+
+.navBar__select__dropdown-content > a {
+  float: none;
+  display: block;
+  line-height: 5rem;
+  background-color: var(--color-navbar);
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .navBar {
+    background-color: var(--color-navbar);
+    padding: 0;
+    transition: all 0.3s;
+  }
+
+  .nav-small,
+  body .navBar .navBar__menu-lines {
+    display: none;
+  }
+
+  .navBar__select {
+    white-space: nowrap;
+  }
+  .navBar__options {
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 600;
+    font-family: "Coda Caption", sans-serif;
+  }
+
+  .navBar__select:hover .navBar__select__dropdown-content {
+    display: block;
+  }
+
+  .on-scroll {
+    background-color: var(--color-secondary);
+    transition: all 0.3s;
+  }
+
+  .on-scroll a,
+  .on-scroll i {
+    color: var(--color-btn-background);
+  }
+
+  .on-scroll a:hover,
+  .on-scroll i:hover {
+    color: black;
+  }
+}
+
+/*Hero*/
+
+.hero {
+  background-image: url("../images/food-background.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+/*grid*/
+.grid {
+  border: 1px solid black;
+  margin: 15px 0;
+}
+.grids-container {
+  margin: 20px;
+}
+
+.grid__img {
+  width: 100%;
+  height: auto;
+}
+
+.grid__text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid h2 {
+  margin: 0;
+}
+.grid p {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  margin: 0 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    border: 0;
+    margin: 0;
+  }
+
+  .grid p {
+    font-size: 2rem;
+  }
+
+  .grid--1x2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .grid:nth-of-type(even) {
+    direction: rtl;
+  }
+
+  .grid img {
+    align-self: center;
+  }
+}
+
+/*Footer*/
+
+.flex--1x3 {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  align-content: center;
+  background-color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.footer__section {
+  margin: 1rem 0;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer i:hover {
+  color: var(--color-btn-hover-text);
+}
+
+.footer__section--mailing > div {
+  margin-bottom: 0.25rem;
+}
+
+.footer__section--icons {
+  margin-top: -1rem;
+}
+
+footer .btn:hover {
+  background-color: var(--color-btn-hover-background);
+  color: var(--color-btn-hover-text);
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 2.5rem;
+  }
+
+  .flex--1x3 {
+    height: 140px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__section {
+    padding: 0 20px;
+  }
+}
